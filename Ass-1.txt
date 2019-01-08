@@ -1,0 +1,133 @@
+//Assignment 1
+
+//Q1)
+
+var ret:number;
+var value1:number=23;
+var value2:number=89;
+var value3:number=6;
+ret=maximum(value1,value2,value3);
+console.log("max no.is:"+ret);
+
+
+function maximum(no1:number,no2:number,no3:number,return:any)
+{
+	if(no1>no2)
+	{
+	  if(no1>no3)
+	  {
+	    return no1;
+	  }
+	 else 
+	  {
+	   return no3;
+	  }
+	}
+	else if(no2>no3)
+	return no2;
+	else
+	no3;
+}
+
+
+/*
+output:-
+
+
+D:\Angular_Assignment>tsc Maximum_Number.ts
+
+D:\Angular_Assignment>node Maximum_Number.js
+max no.is:89
+
+D:\Angular_Assignment>
+
+
+
+------------------------------------------------------------------------------
+
+Q2)*/
+
+var ret:number;
+var value:number=5;
+
+ret=area(value);
+console.log("area of circle is:"+ret);
+
+
+function area(radius:number)
+{
+	return 3.14*radius*radius;
+}
+
+
+
+/*
+output:-
+
+
+D:\Angular_Assignment>tsc area.ts
+
+D:\Angular_Assignment>node area.js
+area of circle is:78.5
+
+D:\Angular_Assignment>
+
+
+*/
+
+----------------------------------------------------------
+
+Q4)
+
+function chkPrime(no:number)
+{
+	if(no==2)
+	{
+		return true;
+	}
+	else if(no>1)
+	{
+	  for(var i=2;i<no;i++)
+	    {
+		if(no%i!==0)
+	        { 
+			
+			console.log("It is prime number...");
+		  return true;
+			
+		}
+		else if(no==i*i)
+		 {
+		  return false;
+		 }
+		else
+		  {
+		   return false;
+		  }
+	    }
+}
+else
+{
+return false;
+}		
+
+}
+console.log(chkPrime(11));
+
+
+/*
+output:-
+
+
+D:\Angular_Assignment>tsc CheckPrime.ts
+
+D:\Angular_Assignment>node CheckPrime.js
+It is prime number...
+true
+
+D:\Angular_Assignment>
+
+
+*/
+------------------------------------------------------------------
+

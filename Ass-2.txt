@@ -1,0 +1,227 @@
+//Assignment 2
+**************************************************
+//Q1
+
+
+// Create and initialise the array
+var arr:number[] = [23,89,6,29,56,45,77,32];
+
+var large:number;
+
+Maximum(arr);
+
+function Maximum(arr_no:number[])
+{	
+	large=arr[0];
+	for(var i=0;i<arr_no.length;i++)
+	{
+		if(large<arr_no[i])
+			large=arr_no[i];
+	}
+	console.log("Maximum number is"+large);
+	
+	//return 0;
+
+}
+
+
+/*
+
+output:-
+
+
+D:\Angular_Assignment>tsc ArrayMaximum.ts
+
+D:\Angular_Assignment>node ArrayMaximum.js
+Maximum number is89
+
+D:\Angular_Assignment>
+
+*/
+
+-----------------------------------------------------
+
+//Q2
+
+
+// Create and initialise the array
+var arr:number[] = [23,6,7,4,5,7];
+
+var sum:number=0;
+
+Summation(arr);
+
+function Summation(arr_no:number[])
+{
+
+	for(var i=0;i<arr_no.length;i++)
+	{
+		
+		sum=sum+arr_no[i];
+
+		
+	}
+	console.log("summation of array numbers is"+sum);
+	
+	return 0;
+
+}
+
+
+/*
+
+output:-
+
+
+
+D:\Angular_Assignment>tsc ArraySummation.ts
+
+D:\Angular_Assignment>node ArraySummation.js
+summation of array numbers is52
+
+D:\Angular_Assignment>
+
+*/
+-----------------------------------------------------------
+//Q3
+
+
+// Create and initialise the array
+var arr:number[] = [23,89,6,29,56,45,77,32];
+
+var largest1:number;
+var largest2:number;
+
+Summation(arr);
+
+function Summation(arr_no:number[])
+{
+	largest1=arr_no[0];
+
+	for(var i=0;i<arr_no.length;i++)
+	{
+		if(arr_no[i]>largest1)
+		{
+			largest1=arr_no[i];
+		}
+	}
+		
+	largest2=arr_no[0];
+
+	for(var i=1;i<arr_no.length;i++)
+	{
+		if(arr_no[i]>largest2 && arr_no[i]<largest1)
+		{
+			largest2=arr_no[i];
+		}
+	}
+
+		
+
+	console.log("LARGEST NUMBER of array numbers is"+largest2);
+	
+	return 0;
+
+}
+
+
+/*
+
+output:-
+
+
+D:\Angular_Assignment>tsc SecondLargeElement_Array.ts
+
+D:\Angular_Assignment>node SecondLargeElement_Array.js
+LARGEST NUMBER of array numbers is77
+
+D:\Angular_Assignment>
+
+*/
+---------------------------------------------------------------------
+
+//Q4)
+
+var value:number=153;
+var OriginalNumber:number;
+var rem:number;
+var result:number=0;
+
+Armstrong(value);
+
+function Armstrong(no:number)
+{
+
+	OriginalNumber=no;
+	  while(OriginalNumber!=0)
+	   {
+	    rem=OriginalNumber%10;
+	    result+=rem*rem*rem;
+	    OriginalNumber/=10;
+	   }
+	  if(result==no)
+	{	
+	  console.log("Given number is armstrong");
+	}
+	 else
+	{
+	  console.log("Given number is not armstrong");
+	}
+}
+
+
+/*
+output:-
+
+
+D:\Angular_Assignment>tsc Armstrong.ts
+
+D:\Angular_Assignment>node Armstrong.js
+Given number is armstrong
+
+D:\Angular_Assignment>
+
+
+*/
+------------------------------------------------------------------
+//Q5
+
+var replace=/Marvellous/gi;
+
+var strg="Pune Kothrud Infosystem";
+
+chkString(strg);
+
+function chkString(str)
+{
+
+if(str.search(replace)==-1)
+{
+	console.log("Does not contain Marvellous");
+}
+else
+{
+console.log("contain Marvellous");
+}
+}
+
+
+/*
+
+output:-
+
+
+D:\Angular_Assignment>tsc chkString.ts
+
+D:\Angular_Assignment>node chkString.js
+contain Marvellous
+
+D:\Angular_Assignment>tsc chkString.ts
+
+D:\Angular_Assignment>node chkString.js
+Does not contain Marvellous
+
+D:\Angular_Assignment>
+
+*/
+---------------------------------------------------------------
